@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>click on Exact Location Button to get your location</p>
+<button Onclick="getpreciseLocation()">precise Location</button>
+
+<p id="location"></p>
+<script >
+
+var x = document.getElementById("location");
+function getPreciseLocation(){
+	if(navigator.geolocation){
+		
+		navigator.geolocation.getCurrentPosition(showExactPosition)
+		
+	}else{
+		x.innerHTML = "Geolocation is not supported"
+	}
+}
+function showExactposition(position){
+	x.innerHTML ="Latitude:"+position.coords.latitude+
+	"<br>Longitude:"+position.coords.longitude;
+}
+
+</script>
+
+
+</body>
+
+</html>
