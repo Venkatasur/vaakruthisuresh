@@ -33,6 +33,6 @@ public class jsonvaakruthi {
 		arrayvalues.add(customervalues2);
 		customer.put("customer",arrayvalues);
 		System.out.println("Json Values:"+customer.toJSONString());
-		
+		System.out.println("hii sir");
 }
 }
